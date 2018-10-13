@@ -1,0 +1,374 @@
+body {
+    background-color:white;
+    border: 1px solid rgb(155, 155, 155);
+}
+
+
+/* Navbar */
+nav { 
+    margin: 0 auto; 
+    width: 100%;
+    background-color: #333;
+    list-style-type: none;
+    margin: -10px 0px 0px 0px;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 5, 5);
+}
+
+
+ul {
+    margin: 0;
+    padding: 15px;
+    background-color: #333;
+}
+
+li{
+    display: inline;
+    margin:  20px;
+}
+
+
+li a {
+
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+section { 
+    display: block;
+}
+
+
+/* Landind Page/ Home */
+
+
+#landing{
+    height: 100vh;
+    background-image: url('Stactic/profile-background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+}
+ h1 {
+    color: white;
+    text-align: center;
+    font-size:75px;
+    font-family:Garamond;  
+    font-style: oblique; 
+    float: center;
+    
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size:55px;
+    font-family:Garamond;  
+    font-style: oblique;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-size:45px;
+    font-family:Garamond;  
+    font-style: oblique;
+}
+
+h4 {
+    color:rgb(156, 156, 156);
+    text-align: center;
+    font-size:20px;
+    font-family:Garamond;  
+    font-style: oblique;
+}
+
+hr { 
+    display: block;
+    border-width: 2px;
+    width: 200px
+}
+
+.My-name {
+    margin: auto;
+    width: 50%;
+    padding: 50px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* my work button */
+
+button {
+    border: 0;
+    line-height: 50px;
+    padding: 0 50px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 12px;
+    background-color: transparent;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+                font-family:Garamond;  
+                border: 2px solid #fff;
+                line-height: 50px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center
+ }
+
+ button a {
+     color: #f2f2f2;
+     text-decoration: none;
+ }
+               
+
+/* Intro About Me */
+#intro {
+    height: 100vh;
+    margin-top: 50px;
+    background-color:white;
+    border: #3B5998;
+    margin: 0px 100px 0px 100px; 
+}
+
+.about-me{
+    color: rgb(156, 156, 156);
+}
+
+
+p{
+    color:rgb(156, 156, 156);;
+    text-align: justify;
+    border: #fff;
+    border-style: solid;
+    width: 1170px;
+    margin: 1.5%;
+    font-size:20px;
+    font-family: "Lato", sans-serif;
+    
+    
+}
+  
+.text {
+   float: right;
+   width: 650px;
+   margin-top: 50px
+
+}
+
+
+.image{
+    margin: 40px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0.2, 0.5);
+    opacity: .7;
+    filter: alpha(opacity=50);
+}
+
+.image:hover{
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+.self-image{
+  float: left;
+  margin: 0 1.5%;
+  width: 30%;
+}
+
+
+blockquote{
+    font-size: 20px;
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: -75px 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 10px 20px;
+    line-height: 1.4;
+    width: 500px;
+    float: right;
+    margin-right: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0.2, 0.2); 
+}
+  
+blockquote:before {
+    content: open-quote;
+    display: inline;
+    line-height: 0;
+    left: -10px;
+    position: relative;
+    top: 30px;
+    color: #ccc;
+    font-size: 3em;
+}
+  
+.quotation{
+    width: 500px;
+ }
+
+
+/* My Work Page*/
+
+#my-work{
+    height: 100vh;
+    background-color:rgb(245, 245, 245);
+}
+
+.my-project{
+    color:rgb(156, 156, 156);
+}
+
+.image-container{
+    vertical-align: middle;
+}
+
+
+.project-image{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0.2, 0.5);
+    opacity: .7;
+    filter: alpha(opacity=50);
+    margin: 5% 1.5%;
+    width: 25%;
+    float: left; 
+}
+
+
+.project-image::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* contact Page */
+
+#contact{
+    height: 100vh;
+    background-color:white;
+    font-family: "Lato", sans-serif;   
+}
+
+.contact-me {
+    color:rgb(156, 156, 156);
+    font-size: 100px;
+    text-align: center;
+}
+
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: white;
+    padding: 100px;
+    margin: 0px;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+
+/* Style all font awesome icons */
+
+.fa {
+    padding: 30px;
+    font-size: 30px;
+    width: 30px;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 20px;
+    display: block; 
+    margin-left: 100px;
+    margin-right: 100px;
+    margin: 2.75em 0 0;
+    display: inline-block;
+    float: none;
+   
+  
+}
+
+/* Add a hover effect*/
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Setting a specific color for each brand */
+
+
+/* Resume */
+
+.fa-file{
+    background:gray;
+    color: white; 
+}
+ 
+/* Linkedin */
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+/* Github */
+
+.fa-github{
+    background:black;
+    color: white;
+}
+
+/* Email */
+
+.fa-envelope-o {
+    background:black;
+    color: white;
+}
+
+.conact-button{ 
+    display: inline-block;
+    padding: 50px 
+}   
+
+.conact-message{
+    color:rgb(156, 156, 156);;
+    font-size:20px;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+
+
+
+
+ 
+  
+  
+
+  
