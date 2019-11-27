@@ -12,69 +12,510 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <!-- font awesome -->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
   <title>My Portfolio</title>
   <style>
-    header{
-        background-image:url("Stactic/landding-page.jpeg");
-        background-size: cover;
-        background-position: center;
-        min-height: 1000px
-    }
-    @media screen and (max-width: 670px){
-    header{
-        min-height: 500px;
-      }
-    }
-    .section{
-      padding-top: 4vw;
-      padding-bottom: 4vw;
-    }
-    .tabs .tab a:focus, .tabs .tab a:focus.active{
-      background: transparent;
-      
-    }
-    button {
-    border: 0;
-    line-height: 50px;
-    padding: 0 50px;
-    font-size: 25px;
-    text-align: center;
-    color: #fff;
-    text-shadow: 3px 3px 3px #000;
-    border-radius: 12px;
-    background-color: transparent;
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-                font-family:Garamond;  
-                border: 3px solid #fff;
-                line-height: 50px;
-                margin: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center
+html {
+  scroll-behavior: smooth;
  }
 
- button a {
-     color: #f2f2f2;
-     text-decoration: none;
- } 
- .My-name {
-    margin: auto;
-    width: 50%;
-    padding: 50px;
-    text-shadow: 2px 2px 2px #000;
-    color: white;
+
+ .content {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 height: 160px;
+	 overflow: hidden;
+	 font-family: 'Lato', sans-serif;
+	 font-size: 30px;
+	 line-height: 40px;
+	 color: #ecf0f1;
+}
+ .content__container {
+	 font-weight: 600;
+	 overflow: hidden;
+	 height: 40px;
+   width: 280px;
+}
+ .content__container:before {
+	 content: '[';
+	 left: 0;
+}
+ .content__container:after {
+	 content: ']';
+	 position: absolute;
+   right: 0;
+}
+ .content__container:after, .content__container:before {
+	 position: absolute;
+	 top: 0;
+	 color: #16a085;
+	 font-size: 42px;
+	 line-height: 40px;
+	 -webkit-animation-name: opacity;
+	 -webkit-animation-duration: 2s;
+	 -webkit-animation-iteration-count: infinite;
+	 animation-name: opacity;
+	 animation-duration: 2s;
+	 animation-iteration-count: infinite;
+}
+ .content__container__text {
+	 display: inline;
+   float: left;
+   padding-left: 20px;
+   margin: 0 ;
+   font-size: 30px;
+}
+
+ .content__container__list {
+	 margin-top: 0;
+	 text-align: right;
+	 list-style: none;
+	 -webkit-animation-name: change;
+	 -webkit-animation-duration: 10s;
+	 -webkit-animation-iteration-count: infinite;
+	 animation-name: change;
+	 animation-duration: 10s;
+   animation-iteration-count: infinite;
+   padding-right: 20px;
+}
+ .content__container__list__item {
+	 line-height: 40px;
+	 margin: 0;
+}
+ @-webkit-keyframes opacity {
+	 0%, 100% {
+		 opacity: 0;
+	}
+	 50% {
+		 opacity: 1;
+	}
+}
+ @-webkit-keyframes change {
+	 0%, 12.66%, 100% {
+		 transform: translate3d(0, 0, 0);
+	}
+	 16.66%, 29.32% {
+		 transform: translate3d(0, -25%, 0);
+	}
+	 33.32%, 45.98% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 49.98%, 62.64% {
+		 transform: translate3d(0, -75%, 0);
+	}
+	 66.64%, 79.3% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 83.3%, 95.96% {
+		 transform: translate3d(0, -25%, 0);
+	}
+}
+ @-o-keyframes opacity {
+	 0%, 100% {
+		 opacity: 0;
+	}
+	 50% {
+		 opacity: 1;
+	}
+}
+ @-o-keyframes change {
+	 0%, 12.66%, 100% {
+		 transform: translate3d(0, 0, 0);
+	}
+	 16.66%, 29.32% {
+		 transform: translate3d(0, -25%, 0);
+	}
+	 33.32%, 45.98% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 49.98%, 62.64% {
+		 transform: translate3d(0, -75%, 0);
+	}
+	 66.64%, 79.3% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 83.3%, 95.96% {
+		 transform: translate3d(0, -25%, 0);
+	}
+}
+ @-moz-keyframes opacity {
+	 0%, 100% {
+		 opacity: 0;
+	}
+	 50% {
+		 opacity: 1;
+	}
+}
+ @-moz-keyframes change {
+	 0%, 12.66%, 100% {
+		 transform: translate3d(0, 0, 0);
+	}
+	 16.66%, 29.32% {
+		 transform: translate3d(0, -25%, 0);
+	}
+	 33.32%, 45.98% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 49.98%, 62.64% {
+		 transform: translate3d(0, -75%, 0);
+	}
+	 66.64%, 79.3% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 83.3%, 95.96% {
+		 transform: translate3d(0, -25%, 0);
+	}
+}
+ @keyframes opacity {
+	 0%, 100% {
+		 opacity: 0;
+	}
+	 50% {
+		 opacity: 1;
+	}
+}
+ @keyframes change {
+	 0%, 12.66%, 100% {
+		 transform: translate3d(0, 0, 0);
+	}
+	 16.66%, 29.32% {
+		 transform: translate3d(0, -25%, 0);
+	}
+	 33.32%, 45.98% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 49.98%, 62.64% {
+		 transform: translate3d(0, -75%, 0);
+	}
+	 66.64%, 79.3% {
+		 transform: translate3d(0, -50%, 0);
+	}
+	 83.3%, 95.96% {
+		 transform: translate3d(0, -25%, 0);
+	}
+}
+ 
+
+
+   header{
+    background-image:url("Stactic/landing_picture.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px
+}
+
+
+
+ .btn {
+    margin-top: calc(50% + 25px);
+    position: relative;
+    display: inline-block;
+       display: block;
+    width: 277px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 60px;
     text-align: center;
-} 
-               
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight:900;
+    font-size:17px;
+    letter-spacing: 0.045em;
+    
+}
+
+.btn svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn svg rect {
+    stroke: rgb(235, 122, 146);
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.btn span{
+  background: rgb(255,130,130);
+  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+.logo {
+  font: 84px 'Arial Narrow', sans-serif;/* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+  
+    color: rgb(251, 249, 251);
+    text-shadow: 0 0 5px rgb(247, 220, 248), 0 0 10px rgb(247, 220, 248),
+             0 0 20px rgb(247, 220, 248), 0 0 30px rgb(247, 220, 248),
+             0 0 40px rgb(247, 220, 248);
+
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+/* stuff for both words */
+.logo span {
+  position: relative;
+}
+.logo span:before,
+.logo span:after {
+  content: '';
+  position: absolute;
+  border-width: 32px;/* makes a nice, big 64px square */
+  border-style: solid;
+  border-color: transparent;
+  height: 0;
+  z-index: 10;
+}
+
+/* stuff for 2nd word */
+.logo .word2 {
+  z-index: 0;/* stack 2nd word below */
+}
+
+p {
+  font-size: 20px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 1.0em;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:5px solid rgb(235, 200, 241) ;
+  line-height:1.6;
+  position: relative;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
+
+
+
+.animated.slide-in-left {
+    animation: slideInLeft .75s ease both;
+    font-family: 'raleway-bold';
+    display: block;
+    text-align: center;
+}
+.header {
+    font-size: 40pt;
+    font-family: 'raleway-bold';
+    color: #444649;
+    padding:40px;
+    
+}
+
+
+
+.header-bar {
+ margin:auto;
+    width: 70px;
+    height: 4px;
+    background: #444649;
+    
+}
+
+
+a{
+  color:black;
+  font-family:sans-serif;
+}
+
+
+
+
+
+
+.polaroid-gallery {
+  text-align: center;
+  
+}
+
+.polaroid-gallery-title {
+  font-size: 32px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+.polaroid-card {
+  display: inline-block;
+  background-color: white;           
+  padding: 5px;
+  box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, 0.7);
+  /* border: 3px solid gray; */
+  /* background: rgb(255,130,130);
+  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%); */
+}
+figure {
+    margin: 1em 80px;
+}
+
+.polaroid-card-caption {
+  text-align: center;
+  font-family: "Marker Felt",sans-serif;
+  font-size: 12px;
+  margin-top: 6px;
+  letter-spacing: 2px;
+}
+
+.polaroid-card:nth-of-type(even) {
+  transform: rotate(12deg);
+}
+
+.polaroid-card:nth-of-type(odd) {
+  transform: rotate(-12deg);
+}
+
+.polaroid-card:nth-of-type(even)::before {
+  content: '';
+  display: block;
+  background-color: rgba(235, 220, 233, 0.66);
+  width: 100px;
+  height: 25px;
+  transform: rotate(-24deg) translate(-30px, -25px);
+}
+
+.polaroid-card:nth-of-type(odd)::before {
+  content: '';
+  display: block;
+  background-color: rgba(230, 229, 222, 0.66);
+  width: 100px;
+  height: 25px;
+  transform: translate(140px, -5px) rotate(25deg);
+}
+
+.polaroid-card:hover {
+  transform: scale(1.5);
+}
+
+
+
+
+
+
+#contact-bar {
+  background-color:rgb(48,48,48);
+  border-top: 3px solid #04C2C9;
+}
+
+
+
+
+
+
+
 
     </style>
 </head>
 <body>
         <header>
-                <nav class="nav-wrapper grey darken-3">
+            <!-- position: absolute;   z-index: 9999;/* Set the navbar to fixed position */
+            top: 0; /* Position the navbar at the top of the page */
+            width: 100%; /* Full width */ position: fixed; /* Set the navbar to fixed position */
+top: 0; /* Position the navbar at the top of the page */
+width: 100%; /* Full width */  -->
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+                <nav class="nav-wrapper grey darken-3" style="   border-bottom: 3px solid #04C2C9;     bottom: 0;
+                ">
                   <div class="container">
                     <a href="#" class="sidenav-trigger" data-target="mobile-menu">
                       <i class="material-icons">menu</i>
@@ -92,31 +533,76 @@
                   </div>
                 </nav>
                 <div class= My-name>
-                        <h1 style="font-size:12vw;text-align:center;">Portfolio</h1>
-                 </div>
-                    <button><a href="#my-projects-section">View my work</a></button>
+                  <!-- Portfolio Title on landing page -->
+                    <h1 class="logo">
+                        <span style="font-size:10vw;text-align:center;"class="word2">Portfolio</span>
+                      </h1>
+                        <!-- old title<h1 style="font-size:10vw;text-align:center;">Portfolio</h1> -->
+
+                      <!-- Button on computer/takes to about me section -->
+                        <div style="display:flex;  height:200px; width:400px; margin-left: auto; 
+                        margin-right: auto;
+                        justify-content: center;">
+                            <a href="#about-me-section" class="btn">
+                            <svg width="277" height="62">
+                              <defs>
+                                  <linearGradient id="grad1">
+                                      <stop offset="0%" stop-color="#FF8282"/>
+                                      <stop offset="100%" stop-color="#E178ED" />
+                                  </linearGradient>
+                              </defs>
+                               <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                              <span>Welcome to my world</span>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- text on computer -->
+                      <div class="content">
+                          <div class="content__container">
+                            <p class="content__container__text">
+                              Hello,
+                            </p>
+                            <ul class="content__container__list">
+                              <li class="content__container__list__item">world !</li>
+                              <li class="content__container__list__item">bob !</li>
+                              <li class="content__container__list__item">users !</li>
+                              <li class="content__container__list__item">everybody !</li>
+                            </ul>
+                          </div>
+                        </div>
               </header>
+
+
+
     <!-- About me -->
-    <section class="section container" id="about-me-section">
+    <section class="section container"   id="about-me-section">
+    <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">ABOUT</div>
+    <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s" style="animation-delay: 0.5s;"></div>
+            <!-- my picture -->
             <div class="row">
               <div class="col s12 l4">
                 <h3 class="indigo-text text-darken-4"></h3>
-                        <img src="Stactic/My Picture.jpg" alt="" class="responsive-img materialboxed">
-                        
+                        <img style="border-radius: 50%;  box-shadow: 0 3px 2px rgba(206, 77, 187, 0.3);  "src="Stactic/My Picture.jpg" alt="" class="responsive-img materialboxed"> 
+                        <!-- fun quote -->
+                        <blockquote>
+                            Creativity is just connecting things. When you ask creative people how they did something.
+                            <span>Steve Jobs</span>
+                        </blockquote>  
                     </div>
               <div class="col s12 l6 offset-l2">
                 <!-- tabs -->
                 <ul class="tabs">
                   <li class="tab col s6">
-                    <a href="#about-me" class="light-blue-text text-darken-4">About me</a>
+                    <a href="#about-me" class="black-text text-lighten-" >About me</a>
                   </li>
                   <li class="tab col s6">
-                    <a href="#skills" class="light-blue-text text-darken-4">Skills</a>
+                    <a href="#skills" class="black-text text-lighten-3">Skills</a>
                   </li>
                 </ul>
                 
                 <div id="about-me" class="col s12">
-                    <p class="flow-text light-blue-text text-darken-4">About Me</p>
+                    <!-- <p class="flow-text purple-text text-lighten-2">About Me</p> -->
                     <p>     My name is Yomairy Pena. I am a Full-Stack Web Developer and Web Designer.
                             My passion is making website ideas come to life. 
                             I enjoy building everything from small business sites to very highly interactive sites, 
@@ -126,37 +612,83 @@
                     </p>
                 </div>
                 <div id="skills" class="col s12">
-                        <p class="flow-text light-blue-text text-darken-4">Skills</p>
+                        <!-- <p class="flow-text purple-text text-lighten-2">Skills</p> -->
                         <p> <strong>Languages:</strong> JavaScript, Ruby, HTML, CSS ,SQL <br>
                             <strong>Framework:</strong> React, Rails, JQuery, Bootstrap<br>
                             <strong>Source Code Editor:</strong> Atom,Visual Studio Code<br>
                             <strong>GitHub</strong><br>
                             <strong>Software:</strong> Electronic medical records (EMR),Electronic practice management (EPM), Nextech, Office Mate, Epic, Availity, and Avisena<br>
                             <strong>Spoken Languages:</strong> Spanish & English
-                        </p>
-                </div>
-                </div>
+                        </p>      
               </div>
-        </div>
+        </section>
         
-        <!-- parallax -->
-    </section>
-        <div class="parallax-container">
-                <div class="parallax">
-                    <img src="Stactic/parallax.1.jpg" alt="" class="responsive-img">
-                </div> 
-            </div> 
+        <!-- funfacts section
+               <div class="gradient-border" id="box">Animated <br>CSS<br>Gradient Border</div>
+              </div>  -->
+
+               <!-- may use image
+                <div style="background: #e0c190 url(https://www.jotform.com/blog/wp-content/uploads/2018/06/particule_animation.png) no-repeat center center;
+                background-size: 429px 260px;">
+                 <div style="display:flex;  background: #e0c190 url(https://www.jotform.com/blog/wp-content/uploads/2018/06/particule_animation.png) no-repeat center center;
+                        background-size: 429px 260px;height:200px; width:400px; margin-left: auto; 
+                        margin-right: auto;
+                        justify-content: center;">
+                        </div>
+                
+                  </div> -->
+
+
+
+
+        
     
+
+
+       
+
+
     
   <!-- My Projects -->
- 
-  <section class="container section" id="my-projects-section" >
-        <div class="row">
-          <div class="col s12 l4">
-              <img src="Stactic/On The Fly.png" alt="" class="responsive-img materialboxed">
+  
+ <div style="background: url(Stactic/yo.jpg); background-size: cover; margin:90px; background-repeat: no-repeat; width:100; height:100;" >
+  
+  <section  id="my-projects-section" >
+     
+          <section class="polaroid-gallery ">
+              <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">Projects</div>
+              <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s" style="animation-delay: 0.5s; font-color:white;"></div>
+            <figure class="polaroid-card">
+              <img src="Stactic/On The Fly.png" width="200" height="200" alt="Swan">
+              <figcaption class="polaroid-card-caption">On The Fly</figcaption>
+            </figure>
+            
+            <figure class="polaroid-card ">
+              <img src="Stactic/Quik Connect.png" width="200" height="200" alt="Geese">
+              <figcaption class="polaroid-card-caption">Quik Connect</figcaption>
+            </figure>
+            <figure class="polaroid-card">
+              <img src="Stactic/Weather App.png" width="200" height="200" alt="Kingfisher">
+              <figcaption class="polaroid-card-caption">Weather</figcaption>
+            </figure>
+            <figure class="polaroid-card">
+              <img src="Stactic/Quiz App.png"  width="200" height="200" alt="Owl">
+              <figcaption class="polaroid-card-caption">Quiz Game</figcaption>
+            </figure>
+          </section>
+          <script src="script.js"></script>
+          
+          
+
+
+    <!-- old portfolio project section <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">Projects</div>  
+    <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s" style="animation-delay: 0.5s;"></div>
+        <div class="row"style="padding-top:20px;">
+          <div class="col s12 l4" style="padding-top:100px;">
+             <a href="https://github.com/Yomairyp/On-The-Fly" target="_blank"><img src="Stactic/On The Fly.png" alt="" class="responsive-img materialboxed"></a>
           </div>
           <div class="col s12 l6 offset-l1">
-            <h2 class="light-blue-text text-darken-4">On The Fly</h2>
+            <h2 style="font-size:30px;">On The Fly</h2>
             <p> This app allows you to find events in your area, either by your current location or zipcode. 
                 After you click on the event that you would like to attend, it takes you the ticket master website were you get to pick 
                 your seats and purchase the ticket. This app is build using React. Also the ticket master API.
@@ -164,22 +696,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col s12 l4 offset-l1 push-l7">
-              <img src="Stactic/Quik Connect.png" alt="" class="responsive-img materialboxed">
+          <div class="col s12 l4 offset-l1 push-l7" >
+              <a href="https://github.com/Yomairyp/On-The-Fly" target="_blank"><img src="Stactic/Quik Connect.png" alt="" class="responsive-img materialboxed"></a>
           </div>
           <div class="col s12 l6 offset-l1 pull-l5 right-align">
-            <h2 class="light-blue-text text-darken-4 ">Quik Connect</h2>
+            <h2>Quik Connect</h2>
             <p class="left-align"> This app is a replacement of bussines cards. It allows you to send social 
                 or bussines account by using an email or a phone number. This app was build using Ruby on Rails.
-         
         </div>
         </div>
         <div class="row">
           <div class="col s12 l4">
-              <img src="Stactic/Weather App.png" alt="" class="responsive-img materialboxed">
+            <a href="https://github.com/Yomairyp/WeatherApp" target="_blank"> <img><img src="Stactic/Weather App.png" alt="" class="responsive-img materialboxed"></a>
           </div>
           <div class="col s12 l6 offset-l1">
-            <h2 class="light-blue-text text-darken-4">Weather</h2>
+            <h2>Weather</h2>
             <p> This app is a weather app that allows you to find out the weather of a location by using zipcode. 
                 This app was build using React.
             </p>
@@ -187,38 +718,52 @@
         </div>
         <div class="row">
           <div class="col s12 l4 offset-l1 push-l7">
-              <img src="Stactic/Quiz App.png" alt="" class="responsive-img materialboxed">
+             <a href="https://github.com/Yomairyp/Quiz_App" target="_blank"> <img src="Stactic/Quiz App.png" alt="" class="responsive-img materialboxed"></a>
           </div>
           <div class="col s12 l6 offset-l1 pull-l5 right-align">
-            <h2 class="light-blue-text text-darken-4 ">Quiz Game</h2>
+            <h2>Quiz Game</h2>
             <p class="left-align"> This is an app that allows you take a quiz. After you click on a answer
               to the question, it goes to the next question. At the end it shows you the score of the ones you got right.
               This app was build using JavaScript.
-         
         </div>
-        </div>
+        </div> -->
+
+
 
         <!-- add next project here -->
       </section>
-  <!-- parallax -->
-  <div class="parallax-container">
-      <div class="parallax">
-          <img src="Stactic/contact-img.jpg" alt="" class="responsive-img"> 
       </div>
-  </div>
+
    <!-- contact me -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
-   <section class=" container section" id="contact-me-section" >
-                 <div class ="contact-me">
+   <!-- old portfolio contact me section <section class=" container grey darken-3"  id="contact-me-section"  style="width: 100%; height:150px; text-align: center " >
+                 <div class ="contact-me " >
                             <i>
-                               <a href="https://github.com/Yomairyp" class="fa fa-github" style="font-size:75px; color:black; padding: 50px; "><h4>Github</h4></a>
-                                 <a href= "https://www.linkedin.com/in/yomairy-pena/" class="fa fa-linkedin" style="font-size:75px; padding: 50px; 
-                                       color:rgb(44, 121, 172)"><h4>LinkedIn</h4></a>
-                                  <a href="mailto:misspena21@gmail.com" class="fa fa-envelope-o" style="font-size:75px; color:black; padding: 50px"><h4>Email</h4></a> 
-                              <a href="Stactic/Yomairy.P _SoftwareDev_Resume copy.PDF" class="fa fa-file" style="font-size:75px; color:rgb(44, 121, 172); padding: 50px"> <h4>Resume</h4></a> 
+                               <a href="https://github.com/Yomairyp" target="_blank" class="fa fa-github" style="font-size:70px; color:rgb(230, 132, 234); padding: 65px; "><h4 class="flow-text purple-text text-lighten-2">Github</h4></a>
+                                 <a href= "https://www.linkedin.com/in/yomairy-pena/" target="_blank"  class="fa fa-linkedin" style="font-size:70px;  padding: 50px; 
+                                       color:purple"><h4 class="flow-text purple-text text-lighten-2">LinkedIn</h4></a>
+                                  <a href="mailto:misspena21@gmail.com" class="fa fa-envelope-o" style="font-size:70px; color:rgb(243, 132, 234); padding: 50px"><h4 class="flow-text">Email</h4></a> 
+                              <a href="Stactic/Yomairy_Pena.pdf" target="_blank" class="fa fa-file" style="font-size:70px; color:purple; padding: 50px"> <h4 class="flow-text">Resume</h4></a> 
                             </i>       
                  </div>
-    </section>
+    </section> -->
+
+   
+      </div>
 
    <!-- Compiled and minified JavaScript -->
    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
