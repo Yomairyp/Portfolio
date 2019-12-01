@@ -14,13 +14,24 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
   <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
   <title>My Portfolio</title>
   <style>
+/* scrolling behavior for entire page */
 html {
   scroll-behavior: smooth;
  }
 
 
+/* Landing page */
+ header{
+    background-image:url("Stactic/landing_picture.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+}
+
+/* silding words on landing page on the computer background */
  .content {
 	 position: absolute;
 	 top: 50%;
@@ -45,7 +56,7 @@ html {
 }
  .content__container:after {
 	 content: ']';
-	 position: absolute;
+	 /* position: absolute; */
    right: 0;
 }
  .content__container:after, .content__container:before {
@@ -62,7 +73,7 @@ html {
 	 animation-iteration-count: infinite;
 }
  .content__container__text {
-	 display: inline;
+	 /* display: inline; */
    float: left;
    padding-left: 20px;
    margin: 0 ;
@@ -199,16 +210,7 @@ html {
 }
  
 
-
-   header{
-    background-image:url("Stactic/landing_picture.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 1000px
-}
-
-
-
+/* about me button on landing page */
  .btn {
     margin-top: calc(50% + 25px);
     position: relative;
@@ -266,6 +268,7 @@ a:hover {
 }
 
 
+/* Portfolio title */
 .logo {
   font: 84px 'Arial Narrow', sans-serif;/* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
   
@@ -278,7 +281,7 @@ a:hover {
   letter-spacing: -4px;
 }
 
-/* stuff for both words */
+
 .logo span {
   position: relative;
 }
@@ -293,18 +296,15 @@ a:hover {
   z-index: 10;
 }
 
-/* stuff for 2nd word */
-.logo .word2 {
-  z-index: 0;/* stack 2nd word below */
+.logo .word1 {
+  z-index: 0;/* stack any second word below */
 }
 
 p {
   font-size: 20px;
 }
 
-
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
-
+/* text box with colorful border  not being used yet*/
 
 #box {
   display: flex;
@@ -350,8 +350,7 @@ p {
 }
 
 
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+/* quote under my picture  */
 blockquote{
   font-size: 1.0em;
   margin:50px auto;
@@ -386,7 +385,7 @@ blockquote span{
 }
 
 
-
+/* the title for eact section */
 
 .animated.slide-in-left {
     animation: slideInLeft .75s ease both;
@@ -402,10 +401,8 @@ blockquote span{
     
 }
 
-
-
 .header-bar {
- margin:auto;
+    margin:auto;
     width: 70px;
     height: 4px;
     background: #444649;
@@ -419,9 +416,7 @@ a{
 }
 
 
-
-
-
+/* Project gallery */
 
 .polaroid-gallery {
   text-align: center;
@@ -440,10 +435,6 @@ a{
   background-color: white;           
   padding: 5px;
   box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, 0.7);
-  /* border: 3px solid gray; */
-  /* background: rgb(255,130,130);
-  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
-  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%); */
 }
 figure {
     margin: 1em 80px;
@@ -486,47 +477,22 @@ figure {
 .polaroid-card:hover {
   transform: scale(1.5);
 }
-
-
-
-
-
-
-#contact-bar {
-  background-color:rgb(48,48,48);
-  border-top: 3px solid #04C2C9;
-}
-
-
-
-
-
-
-
-
-    </style>
+</style>
 </head>
 <body>
         <header>
-            <!-- position: absolute;   z-index: 9999;/* Set the navbar to fixed position */
-            top: 0; /* Position the navbar at the top of the page */
-            width: 100%; /* Full width */ position: fixed; /* Set the navbar to fixed position */
-top: 0; /* Position the navbar at the top of the page */
-width: 100%; /* Full width */  -->
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-                <nav class="nav-wrapper grey darken-3" style="   border-bottom: 3px solid #04C2C9;     bottom: 0;
-                ">
+                <nav class="nav-wrapper grey darken-3" style=" border-bottom: 3px solid #04C2C9;  bottom: 0;">
                   <div class="container">
                     <a href="#" class="sidenav-trigger" data-target="mobile-menu">
                       <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
-                      <li><a href="#about-me-section" style="font-size:20px">About Me</a></li>
-                      <li><a href="#my-projects-section" style="font-size:20px">Projects</a></li>
-                      <li><a href="#contact-me-section"  style="font-size:20px">Contact</a></li>
+                    <li><a href="#about-me-section" style="font-size:20px;">About Me</a></li>
+                      <li><a href="#my-projects-section" style="font-size:20px;">Projects</a></li>
+                      <li><a href="#contact-me-section"  style="font-size:20px;">Contact</a></li>
                     </ul>
                     <ul class="sidenav grey lighten-2" id="mobile-menu">
-                      <li><a href="#about-me-section">About Me</a></li>
+                    <li><a href="#about-me-section">About Me</a></li>
                       <li><a href="#my-projects-section">My Projects</a></li>
                       <li><a href="#contact-me-section">Contact</a></li>
                     </ul>
@@ -534,16 +500,13 @@ width: 100%; /* Full width */  -->
                 </nav>
                 <div class= My-name>
                   <!-- Portfolio Title on landing page -->
-                    <h1 class="logo">
-                        <span style="font-size:10vw;text-align:center;"class="word2">Portfolio</span>
-                      </h1>
+                  <h1 class="logo">
+                    <span style="font-size:10vw; text-align:center;" class="word1">Portfolio</span>
+                  </h1>
                         <!-- old title<h1 style="font-size:10vw;text-align:center;">Portfolio</h1> -->
-
                       <!-- Button on computer/takes to about me section -->
-                        <div style="display:flex;  height:200px; width:400px; margin-left: auto; 
-                        margin-right: auto;
-                        justify-content: center;">
-                            <a href="#about-me-section" class="btn">
+                      <div style="display:flex; height:200px; width:400px; margin-left: auto; margin-right: auto; justify-content:center;">
+                        <a href="#about-me-section" class="btn">
                             <svg width="277" height="62">
                               <defs>
                                   <linearGradient id="grad1">
@@ -554,12 +517,11 @@ width: 100%; /* Full width */  -->
                                <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
                             </svg>
                               <span>Welcome to my world</span>
-                          </a>
-                        </div>
+                             </a>
                       </div>
-                      
+                </div>
                       <!-- text on computer -->
-                      <div class="content">
+                    <div class="content">
                           <div class="content__container">
                             <p class="content__container__text">
                               Hello,
@@ -571,58 +533,63 @@ width: 100%; /* Full width */  -->
                               <li class="content__container__list__item">everybody !</li>
                             </ul>
                           </div>
-                        </div>
+                      </div>
               </header>
 
 
 
     <!-- About me -->
     <section class="section container"   id="about-me-section">
-    <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">ABOUT</div>
-    <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s" style="animation-delay: 0.5s;"></div>
-            <!-- my picture -->
-            <div class="row">
-              <div class="col s12 l4">
-                <h3 class="indigo-text text-darken-4"></h3>
-                        <img style="border-radius: 50%;  box-shadow: 0 3px 2px rgba(206, 77, 187, 0.3);  "src="Stactic/My Picture.jpg" alt="" class="responsive-img materialboxed"> 
-                        <!-- fun quote -->
-                        <blockquote>
-                            Creativity is just connecting things. When you ask creative people how they did something.
-                            <span>Steve Jobs</span>
-                        </blockquote>  
+                <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">ABOUT</div>
+                <div class="header-bar waypoint animated slide-in-left" data-animation="slide-in-left" data-delay=".5s" style="animation-delay: 0.5s;"></div>
+                      <!-- my picture -->
+              <div class="row">
+                  <div class="col s12 l4">
+                            <h3 class="indigo-text text-darken-4"></h3>
+                              <img style="border-radius: 50%;  box-shadow: 0 3px 2px rgba(206, 77, 187, 0.3);  "src="Stactic/My Picture.jpg" alt="" class="responsive-img materialboxed"> 
+                              <!-- fun quote -->
+                              <blockquote>
+                              Creativity is just connecting things. When you ask creative people how they did something.
+                               <span>Steve Jobs</span>
+                            </blockquote>  
                     </div>
-              <div class="col s12 l6 offset-l2">
-                <!-- tabs -->
-                <ul class="tabs">
-                  <li class="tab col s6">
-                    <a href="#about-me" class="black-text text-lighten-" >About me</a>
-                  </li>
-                  <li class="tab col s6">
-                    <a href="#skills" class="black-text text-lighten-3">Skills</a>
-                  </li>
-                </ul>
+
+
+
+                  <div class="col s12 l6 offset-l2">
+                                <!-- tabs -->
+                            <ul class="tabs">
+                              <li class="tab col s6">
+                                <a href="#about-me" class="black-text text-lighten-" >About me</a>
+                              </li>
+                              <li class="tab col s6">
+                              <a href="#skills" class="black-text text-lighten-3">Skills</a>
+                              </li>
+                            </ul>
                 
-                <div id="about-me" class="col s12">
-                    <!-- <p class="flow-text purple-text text-lighten-2">About Me</p> -->
-                    <p>     My name is Yomairy Pena. I am a Full-Stack Web Developer and Web Designer.
-                            My passion is making website ideas come to life. 
-                            I enjoy building everything from small business sites to very highly interactive sites, 
-                            custom and responsive web application. I understand the importance of user-friendly web applications. 
-                            Having a strong background in customer relation has helped me to understand the importance of 
-                            communication and client satisfaction. 
-                    </p>
-                </div>
-                <div id="skills" class="col s12">
-                        <!-- <p class="flow-text purple-text text-lighten-2">Skills</p> -->
-                        <p> <strong>Languages:</strong> JavaScript, Ruby, HTML, CSS ,SQL <br>
-                            <strong>Framework:</strong> React, Rails, JQuery, Bootstrap<br>
-                            <strong>Source Code Editor:</strong> Atom,Visual Studio Code<br>
-                            <strong>GitHub</strong><br>
-                            <strong>Software:</strong> Electronic medical records (EMR),Electronic practice management (EPM), Nextech, Office Mate, Epic, Availity, and Avisena<br>
-                            <strong>Spoken Languages:</strong> Spanish & English
-                        </p>      
+                            <div id="about-me" class="col s12">
+                             <!-- <p class="flow-text purple-text text-lighten-2">About Me</p> -->
+                              <p> My name is Yomairy Pena. I am a Full-Stack Web Developer and Web Designer.
+                                My passion is making website ideas come to life. 
+                                I enjoy building everything from small business sites to very highly interactive sites, 
+                              custom and responsive web application. I understand the importance of user-friendly web applications. 
+                              Having a strong background in customer relation has helped me to understand the importance of 
+                              communication and client satisfaction. 
+                              </p>
+                            </div>
+                            <div id="skills" class="col s12">
+                              <!-- <p class="flow-text purple-text text-lighten-2">Skills</p> -->
+                            <p> <strong>Languages:</strong> JavaScript, Ruby, HTML, CSS ,SQL <br>
+                                <strong>Framework:</strong> React, Rails, JQuery, Bootstrap<br>
+                                <strong>Source Code Editor:</strong> Atom,Visual Studio Code<br>
+                                <strong>GitHub</strong><br>
+                                <strong>Software:</strong> Electronic medical records (EMR),Electronic practice management (EPM), Nextech, Office Mate, Epic, Availity, and Avisena<br>
+                                <strong>Spoken Languages:</strong> Spanish & English
+                            </p> 
+                            <div>     
+                    </div>
               </div>
-        </section>
+    </section>
         
         <!-- funfacts section
                <div class="gradient-border" id="box">Animated <br>CSS<br>Gradient Border</div>
@@ -680,7 +647,7 @@ width: 100%; /* Full width */  -->
               <figcaption class="polaroid-card-caption">Quiz Game</figcaption>
             </figure>
           </section>
-          <script src="script.js"></script>
+          
           
           
 
@@ -767,7 +734,6 @@ width: 100%; /* Full width */  -->
     </section> -->
 
    
-      </div>
 
    <!-- Compiled and minified JavaScript -->
    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -780,5 +746,6 @@ width: 100%; /* Full width */  -->
        $('.tabs').tabs();
       });
    </script>
+   <script src="script.js"></script>
  </body>
  </html> 
