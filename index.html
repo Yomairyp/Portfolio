@@ -6,10 +6,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- font awesome -->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
@@ -17,11 +21,13 @@
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
   <title>My Portfolio</title>
   <style>
+
+
+
 /* scrolling behavior for entire page */
 html {
   scroll-behavior: smooth;
  }
-
 
 /* Landing page */
  header{
@@ -29,6 +35,12 @@ html {
     background-size: cover;
     background-position: center;
     min-height: 1000px;
+}
+
+@media only screen and (max-width: 600px) {
+header{
+  min-height: 100px;
+  }
 }
 
 /* silding words on landing page on the computer background */
@@ -424,6 +436,12 @@ a{
   
 }
 
+@media screen and (min-width: 350px) and (max-width: 760px){
+    ..polaroid-gallery{
+        background-image: url('Stactic/On the fly.png');
+    }
+}
+
 .polaroid-gallery-title {
   font-size: 32px;
   font-family: Helvetica, Arial, sans-serif;
@@ -493,6 +511,7 @@ figure {
 	margin: 0.125em;
 	outline: none;
 	text-align: center;
+  padding:50px;
 }
 
 .wrapper:hover > * {
@@ -511,6 +530,19 @@ figure {
 .share-btn.file:hover { color: #1da1f2; }
 .share-btn.github:hover { color: #333; }
 .share-btn.linkedin:hover { color: #0077b5; }
+
+.oneLetter      { 
+  color:#B76E2D;
+  float:left;
+  font-size:60px; 
+  font-weight:bold; 
+  line-height:1;
+  margin-right:12px;  
+  text-shadow:3px 5px 0 #232839;
+  transform:rotate(-2deg);
+  text-align: center;  
+}
+
 
 
 
@@ -536,6 +568,7 @@ figure {
                     </ul>
                   </div>
                 </nav>
+               <!-- <div style="background-image:url(Stactic/landing_picture.jpg)"></div> -->
                 <div class= My-name>
                   <!-- Portfolio Title on landing page -->
                   <h1 class="logo">
@@ -639,12 +672,10 @@ figure {
                   </div>  -->
 
 
-
+                  <!-- <img src="Stactic/yo.jpg" alt="" class="responsive-img" style=" background-size: cover; background-repeat: no-repeat; width:100; height:100;"> -->
   <!-- My Projects -->
-  
- <div style="background: url(Stactic/yo.jpg); background-size: cover; margin:90px; background-repeat: no-repeat; width:100; height:100;" >
-  
   <section  id="my-projects-section" >
+      <div style="background: url(Stactic/yo.jpg); background-size: cover; background-repeat: no-repeat; width:100; height:100;" >
          <!-- Project gallary container -->
           <section class="polaroid-gallery ">
               <div class="header waypoint animated slide-in-left" data-animation="slide-in-left">Projects</div>
@@ -670,13 +701,15 @@ figure {
               <figcaption class="polaroid-card-caption">Quiz Game</figcaption>
             </figure>
           </section>
+        </div>
 
         <!-- add next project here -->
       </section>
-      </div>
+      
 
    <!-- contact me -->
     <section id="contact-me-section"  style="width: 100%; height:150px; text-align: center " >
+      
       <div class="wrapper">
         <a href="https://github.com/Yomairyp" class="share-btn github" target="_blank">
             <i class="fab fa-github"></i>
@@ -699,7 +732,7 @@ figure {
    <!-- Compiled and minified JavaScript -->
    <script src="https://kit.fontawesome.com/707c311a00.js" crossorigin="anonymous"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    <script>
      $(document).ready(function(){
         $('.sidenav').sidenav();
